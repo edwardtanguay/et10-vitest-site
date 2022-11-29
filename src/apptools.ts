@@ -7,3 +7,12 @@ export const surround = (text: string, twoLetters: string) => {
 		return first + text + last;
 	}
 }
+
+export const chopLeft = (text: string, textToChop: string) => {
+	return 'nnn';
+}
+
+export const chopRight = (text: string, textToChop: string) => {
+	return 'nnn';
+}
+

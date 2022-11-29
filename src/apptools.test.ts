@@ -1,4 +1,4 @@
-import { surround } from './apptools';
+import { surround, chopLeft } from './apptools';
 import { describe, expect, it } from 'vitest';
 
 describe('test that surround() is correctly implemented', () => {
@@ -25,5 +25,11 @@ describe('test that surround() is correctly implemented', () => {
 		expect(surround('test', '')).toBe('test');
 		expect(surround('', '')).toBe('');
 		expect(surround('', '[]')).toBe('[]');
+	});
+});
+
+describe('test that chopLeft() is correctly implemented', () => {
+	it('fails gracefully on empty values', () => {
+		expect(chopLeft('', '[]')).toBe('nnn');
 	});
 });
