@@ -8,6 +8,9 @@ function App() {
   return (
     <div className="App">
       <p>Message: {surround(message, '[]')}</p>
+      <p>Message: {surround(message, '()')}</p>
+      <p>Message: {surround(message, 'slkdjf')}</p>
+      <p>Message: {surround(message, '--')}</p>
     </div>
   )
 }
