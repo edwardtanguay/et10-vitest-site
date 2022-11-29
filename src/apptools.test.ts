@@ -6,10 +6,15 @@ describe('test that surround() is correctly implemented', () => {
 		expect(surround('test', '[]')).toBe('[test]');
 		expect(surround('test', '()')).toBe('(test)');
 		expect(surround('test', '{}')).toBe('{test}');
+		expect(surround('test', '<>')).toBe('<test>');
 	});
 	it('returns double characters correctly', () => {
 		expect(surround('test', '**')).toBe('*test*');
 		expect(surround('test', '//')).toBe('/test/');
+	});
+	it('returns untrimmed lines correctly', () => {
+		expect(surround('test ', '**')).toBe('*test *');
+		expect(surround('test', '** ')).toBe('test');
 	});
 	it('fails gracefully on wrong number of characters', () => {
 		expect(surround('test', '---')).toBe('test');
